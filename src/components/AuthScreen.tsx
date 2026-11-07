@@ -88,6 +88,8 @@ export default function AuthScreen({ mode }: { mode: AuthMode }) {
           <Pressable
             onPress={handleBack}
             hitSlop={8}
+            accessibilityRole="button"
+            accessibilityLabel="Go back"
             className="-ml-2 size-11 items-start justify-center pl-2"
           >
             <Icon source={icons.chevronLeft} size={24} />
