@@ -59,3 +59,49 @@
   font-size: 11px;
   line-height: 1.4;
 }
+
+/*
+ * Auth screens (sign up / sign in). BEM: block, block__element.
+ * Usage: <View className="auth-field"> <Text className="auth-field__label"> ...
+ */
+.auth-title {
+  font-family: var(--font-poppins-bold);
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.auth-subtitle {
+  font-family: var(--font-poppins);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* z-10 keeps the card above the mascot that peeks over it */
+.auth-field {
+  @apply z-10 h-[76px] justify-center rounded-[20px] border border-border bg-white px-5 shadow-sm;
+}
+
+.auth-field__label {
+  font-family: var(--font-poppins);
+  font-size: 13px;
+  line-height: 1.4;
+  @apply text-text-secondary;
+}
+
+.auth-field__input {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  padding: 0;
+  @apply text-text-primary;
+}
+
+.auth-social {
+  @apply h-[53px] flex-row items-center rounded-[20px] border border-border bg-white pl-[38px] shadow-sm;
+}
+
+.auth-social__label {
+  font-family: var(--font-poppins-medium);
+  font-size: 16px;
+  margin-left: 32px;
+  @apply text-text-primary;
+}
