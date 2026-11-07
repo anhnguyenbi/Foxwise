@@ -58,7 +58,12 @@ export default function VerificationModal({
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.backdrop}
       >
-        <Pressable style={StyleSheet.absoluteFill} onPress={handleClose} />
+        <Pressable
+          style={StyleSheet.absoluteFill}
+          onPress={handleClose}
+          accessibilityRole="button"
+          accessibilityLabel="Close verification dialog"
+        />
 
         <View className="mx-6 items-center rounded-3xl bg-white px-6 pb-8 pt-8">
           <View className="size-16 items-center justify-center rounded-full bg-lingua-purple/10">
@@ -101,6 +106,7 @@ export default function VerificationModal({
               autoComplete="one-time-code"
               maxLength={CODE_LENGTH}
               caretHidden
+              accessibilityLabel="Verification code"
               style={styles.hiddenInput}
             />
           </View>
