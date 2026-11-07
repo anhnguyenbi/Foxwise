@@ -5,3 +5,9 @@ declare module "*.png" {
   const source: ImageSourcePropType;
   export default source;
 }
+
+// SVG files are imported as assets and rendered with expo-image (see components/Icon.tsx).
+declare module "*.svg" {
+  const source: number;
+  export default source;
+}
